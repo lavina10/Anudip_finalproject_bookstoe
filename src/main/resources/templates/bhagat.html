@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<link rel="stylesheet" th:href="@{/css/home.css}">
+    <link rel="stylesheet" th:href="@{/css/cart.css}">
+    
+<title>Insert title here</title>
+</head>
+<body>
+<!-- Navbar -->
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#"><img th:src="@{/images/logo.jpg}" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="/home">Home</a>
+                </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/about">About </a>
+      </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/homelogin#contact">Contact</a>
+                  </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+              <a th:href="@{/login}"><i class="" aria-hidden="true"></i>logout</a>
+    </form>
+  </div>
+  </nav>
+  </section>
+ <div class="container"> 
+   <h1>Chetan Bhagat</h1>
+   <div id="alerts"></div>
+<div class="productcont">
+        <div class="product">
+        	<img th:src="@{/images/bhagat/five.jpeg}" class="product-img">
+            <h4 class="productname">Five point someone</h4>
+            <p>chetan Bhagat</p>
+            <p class="price">Rs-40</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+        <img th:src="@{/images/bhagat/gf.jpeg}" class="product-img">
+            <h4 class="productname">Half girlfriend</h4>
+            <p>Chetan Bhagat</p>
+            <p class="price">Rs-50</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+        	<img th:src="@{/images/bhagat/misstake.jpeg}" class="product-img">
+            <h4 class="productname">The 3 mistakes of my life</h4>
+            <p>Chetan Bhagat</p>
+            <p class="price">Rs-30</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+        	<img th:src="@{/images/bhagat/missing.jpeg}" class="product-img">
+            <h4 class="productname">Missing 400 days</h4>
+            <p>Chetan Bhagat</p>
+            <p class="price">Rs-25</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+        	<img th:src="@{/images/bhagat/room.jpeg}" class="product-img">
+            <h4 class="productname">The girl in room 105</h4>
+            <p>Chetan Bhagat</p>
+            <p class="price">Rs-15</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+        	<img th:src="@{/images/bhagat/positive.jpeg}" class="product-img">
+            <h4 class="productname">India Positive</h4>
+            <p>Chetan Bhagat</p>
+            <p class="price">Rs-10</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        <div class="product">
+        	<img th:src="@{/images/bhagat/marrage.jpeg}" class="product-img">
+            <h4 class="productname">One Arranged marriage Murder</h4>
+            <p>Chetan Bhagat</p>
+            <p class="price">Rs-10.50</p>
+            <button class="addtocart">Add To Cart</button>
+        </div>
+        
+        </div>
+        <div class="cart-container">
+          <h2>Cart</h2>
+          <table>
+            <thead>
+              <tr>
+              <th><strong>Product</strong></th>
+              <th><strong>Price</strong></th>
+            </tr>
+            </thead>
+            <tbody id="carttable">
+            </tbody>
+          </table>
+          <hr>
+          <table id="carttotals">
+            <tr>
+              <td><strong>Items</strong></td>
+              <td><strong>Total</strong></td>
+            </tr>
+            <tr>
+              <td>x <span id="itemsquantity">0</span></td>
+             
+              <td>$<span id="total">0</span></td>
+            </tr></table>
+
+            
+          <div class="cart-buttons">  
+            <button id="emptycart">Empty Cart</button>
+            <a href="/checkout"><button id="checkout">Checkout</button></a>
+          </div>
+        </div>
+</div>
+
+  
+ 
+<script type="text/javascript" th:src="@{/js/cart.js}"></script>
+</body>
+</html>
